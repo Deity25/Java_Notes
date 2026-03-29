@@ -1,0 +1,31 @@
+
+Q.1 Write a function to calculate the sum of first n natural numbers.
+
+public class Solution {
+    public static int calculateNaturalSum(int n) {
+        int sum = 0;
+        for (int i = 1; i <= n; i++) {
+            // Corrected: Removed "int" to avoid redeclaring the variable
+            sum = sum + i; 
+        }
+        // Corrected: Added missing semicolon
+        return sum; 
+    }
+}
+
+
+public static void main(String[] args) {
+    // This will print "55" to the console
+    System.out.println(calculateNaturalSum(10)); 
+}
+
+
+public class Solution {
+    public static int calculateNaturalSum(int n) {
+        if (n <= 0) {
+            return 0; // Handle non-positive inputs
+        }
+        // Formula: Sum = n * (n + 1) / 2
+        return n * (n + 1) / 2; 
+    }
+}
