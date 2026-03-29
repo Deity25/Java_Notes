@@ -1,5 +1,31 @@
+Q.1 Program to print a text 5 times
 
-Q.1 Write a function to calculate the sum of first n natural numbers.
+class Main {
+  public static void main(String[] args) {
+    int n = 5;
+    // for loop  
+    for (int i = 1; i <= n; ++i) {
+      System.out.println("Java is fun");
+    }
+  }
+}
+
+Q.2 Program to find the sum of natural numbers from 1 to 1000.
+
+class Main {
+  public static void main(String[] args) {
+    int sum = 0;
+    int n = 1000;
+    // for loop
+    for (int i = 1; i <= n; ++i) {
+      // body inside for loop
+      sum += i;     // sum = sum + i
+    }
+    System.out.println("Sum = " + sum);
+  }
+}
+
+Q.3 Write a function to calculate the sum of first n natural numbers.
 
 public class Solution {
     public static int calculateNaturalSum(int n) {
@@ -29,3 +55,19 @@ public class Solution {
         return n * (n + 1) / 2; 
     }
 }
+
+
+Q.4 
+// Infinite for Loop
+
+class Infinite {
+    public static void main(String[] args) {
+        int sum = 0;
+        for (int i = 1; i <= 10; --i) {
+            System.out.println("Hello");
+        }
+    }
+}
+
+
+Q.5 
