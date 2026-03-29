@@ -1,0 +1,176 @@
+
+https://www.simplilearn.com/tutorials/java-tutorial/jdk-in-java1. Converting Int to Double
+
+Conversion	Type	Method	Data Loss
+int → double	Widening	automatic	❌ No
+double → int	Narrowing	(int)	✅ Yes
+int → String	Manual	valueOf()	❌ No
+String → int	Manual	parseInt()	❌ (if valid)
+
+
+class Main {
+  public static void main(String[] args) {
+    // create int type variable
+    int num = 50;
+    System.out.println("The integer value: " + num);
+    // convert into double type
+    double data = num;
+    System.out.println("The double value: " + data);
+  }
+}
+
+Output:
+Integer value: 50
+Double value: 50.0
+
+
+2. Converting Double into an Int
+
+class Main {
+  public static void main(String[] args) {
+    // create double type variable
+    double num = 50.55;
+    System.out.println("The double value: " + num);
+    // convert into int type
+    int data = (int)num;
+    System.out.println("The integer value: " + data);
+  }
+}
+
+Output:
+Double value: 50.55
+Integer value: 50
+
+
+3. Converting Int to String
+
+class Main {
+  public static void main(String[] args) {
+    // create int type variable
+    int num = 50;
+    System.out.println("The integer value is: " + num);
+    // convert int to string type
+    String data = String.valueOf(num);
+    System.out.println("The string value is: " + data);
+  }
+}
+
+Output:
+Integer value: 50
+String value: 50
+
+
+4. Converting String to Int
+
+class Main {
+  public static void main(String[] args) {
+    // create string type variable
+    String data = "50";
+    System.out.println("The string value is: " + data);
+    // convert string variable to int
+    int num = Integer.parseInt(data);
+    System.out.println("The integer value is: " + num);
+  }
+}
+
+Output:
+String value: 50
+Integer value: 50
+
+
+
+
+Example: Converting int to double
+
+class Main {
+  public static void main(String[] args) {
+    // create int type variable
+    int num = 10;
+    System.out.println("The integer value: " + num);
+    // convert into double type
+    double data = num;
+    System.out.println("The double value: " + data);
+  }
+}
+Run Code
+Output:
+
+The integer value: 10
+The double value: 10.0
+In the above example, we are assigning the int type variable named num to a double type variable named data.
+Here, the Java first converts the int type data into the double type. And then assign it to the double variable.
+In the case of Widening Type Casting, the lower data type (having smaller size) is converted into the higher data type (having larger size). Hence there is no loss in data. This is why this type of conversion happens automatically.
+Note: This is also known as Implicit Type Casting.
+
+
+Narrowing Type Casting
+In Narrowing Type Casting, we manually convert one data type into another using the parenthesis.
+
+Example: Converting double into an int
+
+class Main {
+  public static void main(String[] args) {
+    // create double type variable
+    double num = 10.99;
+    System.out.println("The double value: " + num);
+    // convert into int type
+    int data = (int)num;
+    System.out.println("The integer value: " + data);
+  }
+}
+Run Code
+Output:
+
+The double value: 10.99
+The integer value: 10
+In the above example, we are assigning the double type variable named num to an int type variable named data.
+Notice the line,
+int data = (int)num;
+Here, the int keyword inside the parenthesis indicates that that the num variable is converted into the int type.
+In the case of Narrowing Type Casting, the higher data types (having larger size) are converted into lower data types (having smaller size). Hence there is the loss of data. This is why this type of conversion does not happen automatically.
+Note: This is also known as Explicit Type Casting.
+
+
+
+Example 1: Type conversion from int to String
+class Main {
+  public static void main(String[] args) {
+    // create int type variable
+    int num = 10;
+    System.out.println("The integer value is: " + num);
+    // converts int to string type
+    String data = String.valueOf(num);
+    System.out.println("The string value is: " + data);
+  }
+}
+Run Code
+Output:
+
+The integer value is: 10
+The string value is: 10
+In the above program, notice the line
+
+String data = String.valueOf(num);
+Here, we have used the valueOf() method of the Java String class to convert the int type variable into a string.
+
+
+
+Example 2: Type conversion from String to int
+class Main {
+  public static void main(String[] args) {
+    // create string type variable
+    String data = "10";
+    System.out.println("The string value is: " + data);
+    // convert string variable to int
+    int num = Integer.parseInt(data);
+    System.out.println("The integer value is: " + num);
+  }
+}
+Run Code
+Output:
+
+The string value is: 10
+The integer value is: 10
+In the above example, notice the line
+int num = Integer.parseInt(data);
+Here, we have used the parseInt() method of the Java Integer class to convert a string type variable into an int variable.
